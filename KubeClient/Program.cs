@@ -30,7 +30,7 @@ namespace KubeClient
                         clientBuilder.UseAdoNetClustering(options =>
                         {
                             options.Invariant = "Npgsql";
-                            options.ConnectionString = Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING")
+                            options.ConnectionString = Environment.GetEnvironmentVariable("POSTGRES_URI")
                                 ?? "Host=my_host;Database=my_db;Username=my_user;Password=my_pw";
                         })
                         .Configure<ClusterOptions>(options =>

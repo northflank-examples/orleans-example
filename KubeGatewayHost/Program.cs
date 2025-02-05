@@ -41,7 +41,7 @@ namespace KubeGatewayHost
 
         private static void ConfigureDelegate(HostBuilderContext context, ISiloBuilder builder)
         {
-            var connectionString = Environment.GetEnvironmentVariable("POSTGRES_CONNECTION_STRING") 
+            var connectionString = Environment.GetEnvironmentVariable("POSTGRES_URI")
                                    ?? "Host=my_host;Database=my_db;Username=my_user;Password=my_pw";
             var clusterId = Environment.GetEnvironmentVariable("CLUSTER_ID") ?? "testcluster";
             var serviceId = Environment.GetEnvironmentVariable("SERVICE_ID") ?? "testservice";

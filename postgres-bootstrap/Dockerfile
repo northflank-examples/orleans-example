@@ -12,4 +12,4 @@ WORKDIR /scripts
 COPY orleanspg.sql .
 
 # Define the command
-CMD ["/bin/bash", "-c", "psql \"$POSTGRES_CONNECTION_STRING\" -f orleanspg.sql"]
+CMD ["/bin/bash", "-c", "psql \"$POSTGRES_URI\" -f orleanspg.sql"]
