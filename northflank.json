@@ -50,6 +50,7 @@
                   "priority": 10,
                   "secrets": {
                     "variables": {
+                      "POSTGRES_CONNECTION_STRING": "Host=${PG_HOST};Database=${PG_DATABASE};Username=${PG_USERNAME};Password=${PG_PASSWORD}",
                       "SERVICE_ID": "test1",
                       "CLUSTER_ID": "test1"
                     },
@@ -63,6 +64,30 @@
                           "keyName": "POSTGRES_URI",
                           "aliases": [
                             "POSTGRES_URI"
+                          ]
+                        },
+                        {
+                          "keyName": "USERNAME",
+                          "aliases": [
+                            "PG_USERNAME"
+                          ]
+                        },
+                        {
+                          "keyName": "PASSWORD",
+                          "aliases": [
+                            "PG_PASSWORD"
+                          ]
+                        },
+                        {
+                          "keyName": "DATABASE",
+                          "aliases": [
+                            "PG_DATABASE"
+                          ]
+                        },
+                        {
+                          "keyName": "HOST",
+                          "aliases": [
+                            "PG_HOST"
                           ]
                         }
                       ]
